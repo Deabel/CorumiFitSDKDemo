@@ -1,0 +1,24 @@
+PODS:
+  - CGXPickerView (2.4.1)
+  - Masonry (1.1.0)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - CGXPickerView
+  - Masonry
+  - SVProgressHUD
+
+SPEC REPOS:
+  trunk:
+    - CGXPickerView
+    - Masonry
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  CGXPickerView: 814664f3a210f0bcc05a5ed42bb976177bdd6683
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: 1caaff8a00264c94da94b9e45ee8762fbe01deda
+
+COCOAPODS: 1.10.1

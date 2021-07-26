@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SystemInfoViewController">
+            <connections>
+                <outlet property="bindStateLabel" destination="0TC-4s-2Sn" id="ZmT-ar-mxb"/>
+                <outlet property="broadcastNameLabel" destination="gmq-Y7-AHG" id="OQs-Vy-JIl"/>
+                <outlet property="categoryIdLabel" destination="gUR-YJ-bhO" id="ZoA-x6-DXb"/>
+                <outlet property="compilingBatchNumLabel" destination="YkP-vc-9l3" id="vyo-L1-Se3"/>
+                <outlet property="compilingDateLabel" destination="spL-4A-aYS" id="Khi-TU-HoB"/>
+                <outlet property="compilingTimeLabel" destination="YAo-Ht-ko1" id="X8R-SR-Dbv"/>
+                <outlet property="fwVersionLabel" destination="o59-bD-HcJ" id="VXI-ez-azJ"/>
+                <outlet property="macAddressLabel" destination="uCP-Oa-sd1" id="viH-fg-l9V"/>
+                <outlet property="mcuDateLabel" destination="ddB-wV-oNd" id="Ker-le-0VS"/>
+                <outlet property="otaBranchNameLabel" destination="qEN-Sj-vBa" id="INt-Ca-lBo"/>
+                <outlet property="otaProjectNmaeLabel" destination="hKE-eK-5gL" id="Ra2-ib-bcc"/>
+                <outlet property="systemTypeLabel" destination="pAq-xv-eWc" id="L6v-lg-btF"/>
+                <outlet property="udidLabel" destination="w7d-0b-lD6" id="wYa-88-Bbq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JK0-I0-hfk">
+                    <rect key="frame" x="20" y="104" width="58" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="同步时间"/>
+                    <connections>
+                        <action selector="syncMcuDate:" destination="-1" eventType="touchUpInside" id="6aK-Fd-pXY"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZd-Zm-Dbd">
+                    <rect key="frame" x="20" y="143" width="58" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="获取时间"/>
+                    <connections>
+                        <action selector="getMcuDate:" destination="-1" eventType="touchUpInside" id="jRm-be-n2G"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Smi-xB-1WG">
+                    <rect key="frame" x="20" y="182" width="100" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="设备分类识别码"/>
+                    <connections>
+                        <action selector="getCategoryId:" destination="-1" eventType="touchUpInside" id="oR9-QA-yYx"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGW-t9-aLb">
+                    <rect key="frame" x="20" y="221" width="100" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="设备唯一识别码"/>
+                    <connections>
+                        <action selector="getUdid:" destination="-1" eventType="touchUpInside" id="tY4-a4-GOW"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fL4-Kd-NLI">
+                    <rect key="frame" x="20" y="260" width="78" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="ota项目名称"/>
+                    <connections>
+                        <action selector="getOtaProjectName:" destination="-1" eventType="touchUpInside" id="9kp-Mi-pTv"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaM-J4-G88">
+                    <rect key="frame" x="20" y="299" width="78" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="ota分支名称"/>
+                    <connections>
+                        <action selector="getOtaBranchName:" destination="-1" eventType="touchUpInside" id="gCB-ey-sIx"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdZ-Zu-jDy">
+                    <rect key="frame" x="20" y="338" width="58" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="固件版本"/>
+                    <connections>
+                        <action selector="getFwVersion:" destination="-1" eventType="touchUpInside" id="jkZ-Ve-AOz"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4jY-UG-pru">
+                    <rect key="frame" x="20" y="377" width="58" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="编译日期"/>
+                    <connections>
+                        <action selector="getCompilingDate:" destination="-1" eventType="touchUpInside" id="6Va-Oh-KYM"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZd-D6-00z">
+                    <rect key="frame" x="20" y="416" width="58" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="编译时间"/>
+                    <connections>
+                        <action selector="getCompilingTime:" destination="-1" eventType="touchUpInside" id="PTF-G5-UTO"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qrq-Pw-6V9">
+                    <rect key="frame" x="20" y="455" width="72" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="编译序列号"/>
+                    <connections>
+                        <action selector="getCompilingBatchNumber:" destination="-1" eventType="touchUpInside" id="HyZ-he-YDr"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BpC-Ph-9mw">
+                    <rect key="frame" x="20" y="494" width="58" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="系统类型"/>
+                    <connections>
+                        <action selector="getSystemType:" destination="-1" eventType="touchUpInside" id="0vz-ta-Ycj"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9SJ-mH-onk">
+                    <rect key="frame" x="20" y="533" width="58" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="广播名称"/>
+                    <connections>
+                        <action selector="getBroadcastName:" destination="-1" eventType="touchUpInside" id="Pjw-ha-963"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYY-Io-CU7">
+                    <rect key="frame" x="20" y="572" width="56" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="mac地址"/>
+                    <connections>
+                        <action selector="getMacAddress:" destination="-1" eventType="touchUpInside" id="u1d-Tt-OLG"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddB-wV-oNd">
+                    <rect key="frame" x="357" y="149" width="13" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <color key="highlightedColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUR-YJ-bhO">
+                    <rect key="frame" x="357" y="188" width="13" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7d-0b-lD6">
+                    <rect key="frame" x="357" y="227" width="13" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKE-eK-5gL">
+                    <rect key="frame" x="357" y="266" width="13" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEN-Sj-vBa">
+                    <rect key="frame" x="357" y="305" width="13" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o59-bD-HcJ">
+                    <rect key="frame" x="357" y="344" width="13" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spL-4A-aYS">
+                    <rect key="frame" x="357" y="383" width="13" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAo-Ht-ko1">
+                    <rect key="frame" x="357" y="422" width="13" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YkP-vc-9l3">
+                    <rect key="frame" x="357" y="461" width="13" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAq-xv-eWc">
+                    <rect key="frame" x="357" y="500" width="13" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmq-Y7-AHG">
+                    <rect key="frame" x="357" y="539" width="13" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCP-Oa-sd1">
+                    <rect key="frame" x="357" y="578" width="13" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cds-N0-1EQ">
+                    <rect key="frame" x="20" y="611" width="58" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="绑定状态"/>
+                    <connections>
+                        <action selector="getBindingState:" destination="-1" eventType="touchUpInside" id="Gu9-Cb-pZ5"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0TC-4s-2Sn">
+                    <rect key="frame" x="357" y="617" width="13" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Qrq-Pw-6V9" firstAttribute="leading" secondItem="xZd-D6-00z" secondAttribute="leading" id="1wy-43-a6k"/>
+                <constraint firstItem="pAq-xv-eWc" firstAttribute="centerY" secondItem="BpC-Ph-9mw" secondAttribute="centerY" id="2RV-1F-IoM"/>
+                <constraint firstItem="hKE-eK-5gL" firstAttribute="centerY" secondItem="fL4-Kd-NLI" secondAttribute="centerY" id="2cT-wA-qqH"/>
+                <constraint firstItem="CYY-Io-CU7" firstAttribute="leading" secondItem="9SJ-mH-onk" secondAttribute="leading" id="475-0N-Ttz"/>
+                <constraint firstItem="gUR-YJ-bhO" firstAttribute="trailing" secondItem="ddB-wV-oNd" secondAttribute="trailing" id="49q-uo-zGd"/>
+                <constraint firstItem="4jY-UG-pru" firstAttribute="top" secondItem="gdZ-Zu-jDy" secondAttribute="bottom" constant="10" id="4BR-2d-e5V"/>
+                <constraint firstItem="aZd-Zm-Dbd" firstAttribute="top" secondItem="JK0-I0-hfk" secondAttribute="bottom" constant="10" id="4CY-gk-rmc"/>
+                <constraint firstItem="CYY-Io-CU7" firstAttribute="top" secondItem="9SJ-mH-onk" secondAttribute="bottom" constant="10" id="4TX-Ry-iJc"/>
+                <constraint firstItem="cds-N0-1EQ" firstAttribute="top" secondItem="CYY-Io-CU7" secondAttribute="bottom" constant="10" id="5Le-BM-fFi"/>
+                <constraint firstItem="qEN-Sj-vBa" firstAttribute="trailing" secondItem="hKE-eK-5gL" secondAttribute="trailing" id="6Td-52-K5I"/>
+                <constraint firstItem="gmq-Y7-AHG" firstAttribute="trailing" secondItem="pAq-xv-eWc" secondAttribute="trailing" id="9Ze-3a-cqJ"/>
+                <constraint firstItem="spL-4A-aYS" firstAttribute="centerY" secondItem="4jY-UG-pru" secondAttribute="centerY" id="9gd-rd-zjK"/>
+                <constraint firstItem="xZd-D6-00z" firstAttribute="leading" secondItem="4jY-UG-pru" secondAttribute="leading" id="Abf-i9-4bq"/>
+                <constraint firstItem="uCP-Oa-sd1" firstAttribute="centerY" secondItem="CYY-Io-CU7" secondAttribute="centerY" id="AzC-sf-0yS"/>
+                <constraint firstItem="RaM-J4-G88" firstAttribute="top" secondItem="fL4-Kd-NLI" secondAttribute="bottom" constant="10" id="BLS-ah-OPh"/>
+                <constraint firstItem="JK0-I0-hfk" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="60" id="EJ0-eb-d5Z"/>
+                <constraint firstItem="YAo-Ht-ko1" firstAttribute="trailing" secondItem="spL-4A-aYS" secondAttribute="trailing" id="Fd5-yc-g2x"/>
+                <constraint firstItem="BpC-Ph-9mw" firstAttribute="leading" secondItem="Qrq-Pw-6V9" secondAttribute="leading" id="HhQ-Ae-0Im"/>
+                <constraint firstItem="gdZ-Zu-jDy" firstAttribute="top" secondItem="RaM-J4-G88" secondAttribute="bottom" constant="10" id="IHd-ym-w7Y"/>
+                <constraint firstItem="RaM-J4-G88" firstAttribute="leading" secondItem="fL4-Kd-NLI" secondAttribute="leading" id="IN5-SF-1qm"/>
+                <constraint firstItem="pAq-xv-eWc" firstAttribute="trailing" secondItem="YkP-vc-9l3" secondAttribute="trailing" id="J13-k7-Xew"/>
+                <constraint firstItem="9SJ-mH-onk" firstAttribute="leading" secondItem="BpC-Ph-9mw" secondAttribute="leading" id="J50-Ij-OXb"/>
+                <constraint firstItem="0TC-4s-2Sn" firstAttribute="centerY" secondItem="cds-N0-1EQ" secondAttribute="centerY" id="K6b-3x-Zto"/>
+                <constraint firstItem="o59-bD-HcJ" firstAttribute="centerY" secondItem="gdZ-Zu-jDy" secondAttribute="centerY" id="Ktv-YI-Gsc"/>
+                <constraint firstItem="hKE-eK-5gL" firstAttribute="trailing" secondItem="w7d-0b-lD6" secondAttribute="trailing" id="M2r-yP-E99"/>
+                <constraint firstItem="uCP-Oa-sd1" firstAttribute="trailing" secondItem="gmq-Y7-AHG" secondAttribute="trailing" id="Mf6-pG-VXP"/>
+                <constraint firstItem="o59-bD-HcJ" firstAttribute="trailing" secondItem="qEN-Sj-vBa" secondAttribute="trailing" id="Mjs-hP-Ral"/>
+                <constraint firstItem="cds-N0-1EQ" firstAttribute="leading" secondItem="CYY-Io-CU7" secondAttribute="leading" id="MoK-R4-6kz"/>
+                <constraint firstItem="spL-4A-aYS" firstAttribute="trailing" secondItem="o59-bD-HcJ" secondAttribute="trailing" id="N82-xs-2S1"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="ddB-wV-oNd" secondAttribute="trailing" constant="20" id="Osv-1q-RGH"/>
+                <constraint firstItem="YkP-vc-9l3" firstAttribute="trailing" secondItem="YAo-Ht-ko1" secondAttribute="trailing" id="PRx-VF-wx1"/>
+                <constraint firstItem="xZd-D6-00z" firstAttribute="top" secondItem="4jY-UG-pru" secondAttribute="bottom" constant="10" id="QYz-yj-QAH"/>
+                <constraint firstItem="fL4-Kd-NLI" firstAttribute="top" secondItem="jGW-t9-aLb" secondAttribute="bottom" constant="10" id="Qxr-1v-MmU"/>
+                <constraint firstItem="gdZ-Zu-jDy" firstAttribute="leading" secondItem="RaM-J4-G88" secondAttribute="leading" id="XnB-sw-qna"/>
+                <constraint firstItem="ddB-wV-oNd" firstAttribute="centerY" secondItem="aZd-Zm-Dbd" secondAttribute="centerY" id="Yfn-k4-fG5"/>
+                <constraint firstItem="JK0-I0-hfk" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="bWU-Pt-Rzn"/>
+                <constraint firstItem="w7d-0b-lD6" firstAttribute="trailing" secondItem="gUR-YJ-bhO" secondAttribute="trailing" id="byy-XA-xdM"/>
+                <constraint firstItem="0TC-4s-2Sn" firstAttribute="trailing" secondItem="uCP-Oa-sd1" secondAttribute="trailing" id="c1K-BZ-5sh"/>
+                <constraint firstItem="aZd-Zm-Dbd" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="dIo-Ql-PIY"/>
+                <constraint firstItem="fL4-Kd-NLI" firstAttribute="leading" secondItem="jGW-t9-aLb" secondAttribute="leading" id="fJL-lK-RsR"/>
+                <constraint firstItem="Smi-xB-1WG" firstAttribute="leading" secondItem="aZd-Zm-Dbd" secondAttribute="leading" id="fR1-lC-jbB"/>
+                <constraint firstItem="YkP-vc-9l3" firstAttribute="centerY" secondItem="Qrq-Pw-6V9" secondAttribute="centerY" id="fSS-84-Llo"/>
+                <constraint firstItem="w7d-0b-lD6" firstAttribute="centerY" secondItem="jGW-t9-aLb" secondAttribute="centerY" id="hiC-r3-bef"/>
+                <constraint firstItem="9SJ-mH-onk" firstAttribute="top" secondItem="BpC-Ph-9mw" secondAttribute="bottom" constant="10" id="hlR-dW-c7D"/>
+                <constraint firstItem="qEN-Sj-vBa" firstAttribute="centerY" secondItem="RaM-J4-G88" secondAttribute="centerY" id="iLM-ld-eTh"/>
+                <constraint firstItem="jGW-t9-aLb" firstAttribute="top" secondItem="Smi-xB-1WG" secondAttribute="bottom" constant="10" id="iTd-po-wBj"/>
+                <constraint firstItem="jGW-t9-aLb" firstAttribute="leading" secondItem="Smi-xB-1WG" secondAttribute="leading" id="lVY-Q3-5Kq"/>
+                <constraint firstItem="gmq-Y7-AHG" firstAttribute="firstBaseline" secondItem="9SJ-mH-onk" secondAttribute="firstBaseline" id="m7f-9K-OCf"/>
+                <constraint firstItem="gUR-YJ-bhO" firstAttribute="centerY" secondItem="Smi-xB-1WG" secondAttribute="centerY" id="mlS-Tl-zRa"/>
+                <constraint firstItem="Qrq-Pw-6V9" firstAttribute="top" secondItem="xZd-D6-00z" secondAttribute="bottom" constant="10" id="oK0-VN-eDO"/>
+                <constraint firstItem="4jY-UG-pru" firstAttribute="leading" secondItem="gdZ-Zu-jDy" secondAttribute="leading" id="pvT-aF-nDs"/>
+                <constraint firstItem="BpC-Ph-9mw" firstAttribute="top" secondItem="Qrq-Pw-6V9" secondAttribute="bottom" constant="10" id="pxx-K1-DU6"/>
+                <constraint firstItem="YAo-Ht-ko1" firstAttribute="centerY" secondItem="xZd-D6-00z" secondAttribute="centerY" id="tR9-MF-eKm"/>
+                <constraint firstItem="Smi-xB-1WG" firstAttribute="top" secondItem="aZd-Zm-Dbd" secondAttribute="bottom" constant="10" id="yQI-MP-IFQ"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="136.60714285714286"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

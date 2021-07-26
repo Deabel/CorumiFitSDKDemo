@@ -1,0 +1,3 @@
+[submodule "BLESDKDemo/Frameworks/CFDeviceKit"]
+	path = BLESDKDemo/Frameworks/CFDeviceKit
+	url = git@github.com:Deabel/CorumiFitSDK.git

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DataSyncViewController">
+            <connections>
+                <outlet property="stepTargetTF" destination="YG8-VF-SVd" id="KCZ-QC-vsB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sgz-13-lsu">
+                    <rect key="frame" x="20" y="104" width="92" height="30"/>
+                    <state key="normal" title="设置步数目标"/>
+                    <connections>
+                        <action selector="setStepTarget:" destination="-1" eventType="touchUpInside" id="0Gc-7W-oMY"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncc-8N-Q80">
+                    <rect key="frame" x="20" y="154" width="92" height="30"/>
+                    <state key="normal" title="获取步数目标"/>
+                    <connections>
+                        <action selector="getStepTarget:" destination="-1" eventType="touchUpInside" id="fVo-4M-oQx"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oje-cb-kVw">
+                    <rect key="frame" x="161" y="433" width="92" height="30"/>
+                    <state key="normal" title="同步心率数据"/>
+                    <connections>
+                        <action selector="syncHeartRate:" destination="-1" eventType="touchUpInside" id="6tG-wN-tnf"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFW-46-uxZ">
+                    <rect key="frame" x="161" y="473" width="92" height="30"/>
+                    <state key="normal" title="同步睡眠数据"/>
+                    <connections>
+                        <action selector="syncSleeps:" destination="-1" eventType="touchUpInside" id="sio-O2-BjG"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8m5-Xd-8rY">
+                    <rect key="frame" x="161" y="393" width="92" height="30"/>
+                    <state key="normal" title="同步步数数据"/>
+                    <connections>
+                        <action selector="SyncSteps:" destination="-1" eventType="touchUpInside" id="dlh-px-1F5"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7o-gM-Fvw">
+                    <rect key="frame" x="161" y="513" width="92" height="30"/>
+                    <state key="normal" title="同步全部数据"/>
+                    <connections>
+                        <action selector="syncAll:" destination="-1" eventType="touchUpInside" id="iEg-eJ-whW"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YG8-VF-SVd">
+                    <rect key="frame" x="314" y="125" width="80" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="1BL-Xe-941"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="r7o-gM-Fvw" firstAttribute="top" secondItem="oFW-46-uxZ" secondAttribute="bottom" constant="10" id="A4r-uQ-oMn"/>
+                <constraint firstItem="Oje-cb-kVw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="atp-tl-NEA"/>
+                <constraint firstItem="8m5-Xd-8rY" firstAttribute="centerX" secondItem="Oje-cb-kVw" secondAttribute="centerX" id="b3R-I2-43S"/>
+                <constraint firstItem="Sgz-13-lsu" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="bEd-72-1VE"/>
+                <constraint firstItem="Oje-cb-kVw" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="bQq-Kb-3IE"/>
+                <constraint firstItem="YG8-VF-SVd" firstAttribute="bottom" secondItem="Sgz-13-lsu" secondAttribute="bottom" constant="25" id="eJd-zP-MCZ"/>
+                <constraint firstItem="ncc-8N-Q80" firstAttribute="top" secondItem="Sgz-13-lsu" secondAttribute="bottom" constant="20" id="nfz-EM-3iR"/>
+                <constraint firstItem="Sgz-13-lsu" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="60" id="rCW-wg-sd6"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="YG8-VF-SVd" secondAttribute="trailing" constant="20" id="uAM-ad-9G1"/>
+                <constraint firstItem="ncc-8N-Q80" firstAttribute="leading" secondItem="Sgz-13-lsu" secondAttribute="leading" id="uEm-2n-YcU"/>
+                <constraint firstItem="oFW-46-uxZ" firstAttribute="centerX" secondItem="Oje-cb-kVw" secondAttribute="centerX" id="uc2-NA-ZwM"/>
+                <constraint firstItem="Oje-cb-kVw" firstAttribute="top" secondItem="8m5-Xd-8rY" secondAttribute="bottom" constant="10" id="wDT-8G-L4c"/>
+                <constraint firstItem="oFW-46-uxZ" firstAttribute="top" secondItem="Oje-cb-kVw" secondAttribute="bottom" constant="10" id="wUW-mm-UDc"/>
+                <constraint firstItem="r7o-gM-Fvw" firstAttribute="centerX" secondItem="oFW-46-uxZ" secondAttribute="centerX" id="xuf-0I-Utz"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

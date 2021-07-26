@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReminderViewController">
+            <connections>
+                <outlet property="callSwitch" destination="0Vh-fq-5MC" id="56R-2S-QSh"/>
+                <outlet property="othersSwitch" destination="iQc-aS-3tz" id="5RP-e4-mRS"/>
+                <outlet property="reminderIntervalLabel" destination="KFS-sT-VpE" id="34X-PV-4CX"/>
+                <outlet property="reminderIntervalTF" destination="UMv-Rr-mrm" id="ueE-i3-QAK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AfM-bI-W1d">
+                    <rect key="frame" x="20" y="104" width="92" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="设置提醒间隔"/>
+                    <connections>
+                        <action selector="setReminderInterval:" destination="-1" eventType="touchUpInside" id="2Ho-3K-KGR"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fH9-bS-Wq6">
+                    <rect key="frame" x="20" y="144" width="92" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="获取提醒间隔"/>
+                    <connections>
+                        <action selector="getReminderInterval:" destination="-1" eventType="touchUpInside" id="3jU-8p-ZLN"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKW-zq-2yF">
+                    <rect key="frame" x="20" y="184" width="62" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="设置提醒"/>
+                    <connections>
+                        <action selector="setReminder:" destination="-1" eventType="touchUpInside" id="uJa-ob-x6v"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNY-FK-wZW">
+                    <rect key="frame" x="332" y="184" width="62" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="获取提醒"/>
+                    <connections>
+                        <action selector="getReminder:" destination="-1" eventType="touchUpInside" id="aFg-Ex-0g4"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFS-sT-VpE">
+                    <rect key="frame" x="380" y="150" width="14" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="来电" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nu0-15-8G9">
+                    <rect key="frame" x="20" y="234" width="31" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UMv-Rr-mrm">
+                    <rect key="frame" x="344" y="102" width="50" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="hmK-HH-cf9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    <connections>
+                        <action selector="reminderIntervalEditingChanged:" destination="-1" eventType="editingChanged" id="Nfu-H8-fkI"/>
+                    </connections>
+                </textField>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Vh-fq-5MC">
+                    <rect key="frame" x="61" y="227.5" width="51" height="31"/>
+                    <connections>
+                        <action selector="callSwitch:" destination="-1" eventType="valueChanged" id="8Re-fV-sNp"/>
+                    </connections>
+                </switch>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iQc-aS-3tz">
+                    <rect key="frame" x="345" y="227.5" width="51" height="31"/>
+                    <connections>
+                        <action selector="othersSwitch:" destination="-1" eventType="valueChanged" id="0HB-Ou-k5O"/>
+                    </connections>
+                </switch>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="其它" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="naC-Ck-ob4">
+                    <rect key="frame" x="304" y="234" width="31" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="AfM-bI-W1d" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="60" id="5sc-ro-RpW"/>
+                <constraint firstItem="iQc-aS-3tz" firstAttribute="leading" secondItem="naC-Ck-ob4" secondAttribute="trailing" constant="10" id="EY0-rA-J5K"/>
+                <constraint firstItem="cKW-zq-2yF" firstAttribute="top" secondItem="fH9-bS-Wq6" secondAttribute="bottom" constant="10" id="MMM-QE-EUd"/>
+                <constraint firstItem="fH9-bS-Wq6" firstAttribute="top" secondItem="AfM-bI-W1d" secondAttribute="bottom" constant="10" id="NLG-F7-P4N"/>
+                <constraint firstItem="nu0-15-8G9" firstAttribute="top" secondItem="cKW-zq-2yF" secondAttribute="bottom" constant="20" id="NcC-qt-OUX"/>
+                <constraint firstItem="KFS-sT-VpE" firstAttribute="centerY" secondItem="fH9-bS-Wq6" secondAttribute="centerY" id="Q9p-IP-xum"/>
+                <constraint firstItem="iQc-aS-3tz" firstAttribute="centerY" secondItem="0Vh-fq-5MC" secondAttribute="centerY" id="QYX-Pi-KbC"/>
+                <constraint firstItem="cKW-zq-2yF" firstAttribute="leading" secondItem="fH9-bS-Wq6" secondAttribute="leading" id="RV9-rY-t6o"/>
+                <constraint firstItem="UMv-Rr-mrm" firstAttribute="centerY" secondItem="AfM-bI-W1d" secondAttribute="centerY" id="Rlj-zn-Vjb"/>
+                <constraint firstItem="nu0-15-8G9" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="VWX-YM-ct6"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="KFS-sT-VpE" secondAttribute="trailing" constant="20" id="Wmj-MG-Fp2"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="UMv-Rr-mrm" secondAttribute="trailing" constant="20" id="iN0-ws-cMX"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="bNY-FK-wZW" secondAttribute="trailing" constant="20" id="jfL-vR-rwA"/>
+                <constraint firstItem="iQc-aS-3tz" firstAttribute="trailing" secondItem="bNY-FK-wZW" secondAttribute="trailing" id="m3F-A8-Kah"/>
+                <constraint firstItem="fH9-bS-Wq6" firstAttribute="leading" secondItem="AfM-bI-W1d" secondAttribute="leading" id="mhg-y7-i9k"/>
+                <constraint firstItem="0Vh-fq-5MC" firstAttribute="centerY" secondItem="nu0-15-8G9" secondAttribute="centerY" id="ny0-Oc-2Tb"/>
+                <constraint firstItem="0Vh-fq-5MC" firstAttribute="leading" secondItem="nu0-15-8G9" secondAttribute="trailing" constant="10" id="sRR-aa-Bpk"/>
+                <constraint firstItem="naC-Ck-ob4" firstAttribute="centerY" secondItem="iQc-aS-3tz" secondAttribute="centerY" id="tvB-U4-swa"/>
+                <constraint firstItem="bNY-FK-wZW" firstAttribute="centerY" secondItem="cKW-zq-2yF" secondAttribute="centerY" id="unn-Wi-c86"/>
+                <constraint firstItem="AfM-bI-W1d" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="wJT-0h-odM"/>
+            </constraints>
+            <point key="canvasLocation" x="19" y="132"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

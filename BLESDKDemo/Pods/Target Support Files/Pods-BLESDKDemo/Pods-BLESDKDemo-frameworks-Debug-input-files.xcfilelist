@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-BLESDKDemo/Pods-BLESDKDemo-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CGXPickerView/CGXPickerView.framework
+${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework
+${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework
